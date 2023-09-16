@@ -4,7 +4,6 @@
   "description": "Normal calculator project",
   "main": "index.js",
   "scripts": {
-    "start": "npm run"
   },
   "keywords": [],
   "author": "Netanel Kozel",

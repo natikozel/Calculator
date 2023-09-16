@@ -6,7 +6,7 @@ let total = 0;
 let operator;
 let firstNumber
 let secondNumber;
-
+let reset = true;
 wrapper.addEventListener('click', e => {
 
     if (e.target.nodeName === 'BUTTON') {
@@ -25,13 +25,18 @@ wrapper.addEventListener('click', e => {
                 operator = '';
                 firstNumber = 0
                 secondNumber = 0;
+                reset = true;
                 break;
             case '=':
-                const str = input.textContent.split(operator)
-                secondNumber = Number(str[str.length - 1])
+                if (reset) {
+                    const str = input.textContent.split(operator)
+                    secondNumber = Number(str[str.length - 1])
+                    reset = false
+                }
                 if (operator) {
                     total = handleOperations();
                     input.textContent = total
+                    firstNumber = total;
                 }
                 break;
 
@@ -60,7 +65,6 @@ wrapper.addEventListener('click', e => {
 
 
 const handleOperations = () => {
-    console.log(firstNumber, secondNumber)
     switch (operator) {
         case '+':
             return firstNumber + secondNumber
