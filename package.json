@@ -1,0 +1,12 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Normal calculator project",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run"
+  },
+  "keywords": [],
+  "author": "Netanel Kozel",
+  "license": "ISC"
+}
