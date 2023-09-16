@@ -1,2 +1,2 @@
  ## Live Demo
-**You can see the `Calculator` live on:** [Here]([https://naticalc.netlify.app/])
+ **You can see the `Forkify App` live on:** [Here](https://naticalc.netlify.app/)
