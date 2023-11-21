@@ -31,7 +31,7 @@ wrapper.addEventListener('click', (event: MouseEvent): void => {
                 if (str.length > 2 && secondNumber === 0)
                     return
                 firstNumber = str[0]
-                if (str[1])
+                if (str.length > 1)
                     secondNumber = str[1]
                 total = handleOperations();
                 break;
@@ -72,7 +72,7 @@ const handleOperations = (): number | null => {
         default:
             result = null;
     }
-    if (!result)
+    if (result === null)
         return result
     input.textContent = '' + result
     firstNumber = result
